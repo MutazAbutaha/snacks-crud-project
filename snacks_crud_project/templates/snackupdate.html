@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+
+{% block title%} Update Snack {% endblock %}
+{% block content%}
+<h1>{{x.title}} Update</h1>
+
+<form  method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" , value="Update">
+
+</form>
+<br>
+<h3>  <a href="{% url 'snack_list' %}">Back</a> </h3>
+
+
+
+{% endblock%}
